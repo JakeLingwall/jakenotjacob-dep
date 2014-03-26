@@ -1,0 +1,17 @@
+{
+  "name": "jakenotjacob",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.3.0-beta.3",
+    "json3": "~3.2.6",
+    "es5-shim": "~2.1.0",
+    "angular-resource": "1.3.0-beta.3",
+    "angular-cookies": "1.3.0-beta.3",
+    "angular-sanitize": "1.3.0-beta.3",
+    "angular-route": "1.3.0-beta.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.3.0-beta.3",
+    "angular-scenario": "1.3.0-beta.3"
+  }
+}
