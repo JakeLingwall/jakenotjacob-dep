@@ -1,4 +1,9 @@
-/* line 1, sass/main.scss */
-body {
-  background-color: blue;
+/* line 7, sass/_layout.scss */
+.container {
+  padding: 20px;
+}
+
+/* line 1, sass/_blog.scss */
+.blog {
+  color: purple;
 }
