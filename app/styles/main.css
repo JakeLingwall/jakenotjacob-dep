@@ -1,3 +1,6 @@
+.margin-right-small {
+  margin-right: 5px; }
+
 body {
   font-weight: lighter;
   font-family: helvetica; }
@@ -29,7 +32,8 @@ body {
   left: 0;
   bottom: 0;
   width: 125px;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #505658; }
   .left-nav .nav-item {
     width: 125px;
     display: inline-block;
@@ -46,14 +50,24 @@ body {
     .left-nav .nav-item:nth-child(2) {
       background-color: #505658;
       margin-top: -3px; }
+      .left-nav .nav-item:nth-child(2):hover {
+        background-color: #575e60; }
     .left-nav .nav-item:nth-child(3) {
       background-color: #796555; }
+      .left-nav .nav-item:nth-child(3):hover {
+        background-color: #826d5b; }
     .left-nav .nav-item:nth-child(4) {
       background-color: #c98b5f; }
+      .left-nav .nav-item:nth-child(4):hover {
+        background-color: #cd936a; }
     .left-nav .nav-item:nth-child(5) {
       background-color: #75807c; }
+      .left-nav .nav-item:nth-child(5):hover {
+        background-color: #7d8884; }
     .left-nav .nav-item:nth-child(6) {
       background-color: #a0574a; }
+      .left-nav .nav-item:nth-child(6):hover {
+        background-color: #aa5d4f; }
 
 .blog {
   color: #505658; }
