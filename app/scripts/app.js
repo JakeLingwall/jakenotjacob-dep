@@ -5,7 +5,8 @@ angular.module('jakenotjacobApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute', 
-  'firebase'
+  'firebase',
+  'textAngular'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -16,6 +17,10 @@ angular.module('jakenotjacobApp', [
       .when('/:project', {
         templateUrl: '/scripts/project/project.html',
         controller: 'projectCtrl'
+      })
+      .when('/jakelingwall/admin', {
+        templateUrl: '/scripts/admin/admin.html',
+        controller: 'adminCtrl'
       })
       .otherwise({
         redirectTo: '/'
