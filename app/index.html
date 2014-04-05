@@ -27,23 +27,23 @@
       <span>This site is dedicated to all true Jake's. Jacob's are fakes.</span>
     </div>
 
-    <div class="left-nav">
+    <div class="left-nav" ng-controller="mainCtrl">
       <div class="nav-item">
         <img src="./images/jakeface.png"/>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" ng-click="toBlog()">
         <span><i class="fa fa-comments margin-right-small" style="font-size:20px;"></i>Blog</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" ng-click="toFirstProject()">
         <span><i class="fa fa-video-camera margin-right-small" style="font-size:20px;"></i>TPG</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" ng-click="toSecondProject()">
         <span><i class="fa fa-heart margin-right-small" style="font-size:20px;"></i>On Serve</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" ng-click="toThirdProject()">
         <span><i class="fa fa-money margin-right-small" style="font-size:20px;"></i>Gold Watch</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" ng-click="toFourthProject()">
         <span><i class="fa fa-pencil margin-right-small" style="font-size:20px;"></i>Writings</span>
       </div>
 
@@ -70,17 +70,21 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angularfire/angularfire.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/blog/blogCtrl.js"></script>
+        <script src="scripts/main/mainCtrl.js"></script>
+        <script src="scripts/project/projectCtrl.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,6 +1,14 @@
 <div class="blog">
-  <h1>{{welcomeMessage}}</h1>
-  <div>
-    {{body}}
+  <div ng-repeat="post in posts">
+    <h1>{{post.title}}</h1>
+    <div class="post-body">
+      {{post.body}}
+    </div>
+    <div class="post-comments">
+      <div ng-repeat="comment in post.comments">
+        <div><span>{{comment.poster}}</span> <span>{{comment.date | date}}</span></div>
+        <div>{{comment.comment}}</div>
+      </div>
+    </div>
   </div>
 </div>
