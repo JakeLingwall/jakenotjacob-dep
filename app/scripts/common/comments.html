@@ -1,0 +1,7 @@
+<div class="post-comments">
+  <input class="input" placeholder="Leave A Comment" ng-focus="makeAComment()"/>
+  <div ng-repeat="comment in comments">
+    <div><span>{{comment.poster}}</span> <span>{{comment.date | date}}</span></div>
+    <div>{{comment.comment}}</div>
+  </div>
+</div>

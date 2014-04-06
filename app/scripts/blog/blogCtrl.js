@@ -13,4 +13,9 @@ angular.module('jakenotjacobApp').controller('blogCtrl', function ($scope) {
       $scope.$apply();
     }
   }
+
+  $scope.saveNewComment = function(newComment){
+    //save the new comment to the database here.
+  }
+
 });

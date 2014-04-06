@@ -5,6 +5,8 @@ angular.module('jakenotjacobApp').controller('adminCtrl', function ($scope, $loc
   var dataRef = new Firebase("https://jakenotjacob.firebaseio.com");
   $scope.newPost = "hi";
 
+  //Will need to authenticate on this page. simple-login?
+
   $scope.leeroyJenkins = function(){
     debugger;
     var newpost = {title: $scope.postTitle, body: $scope.newPost, date: new Date().getTime(), comments: []};
