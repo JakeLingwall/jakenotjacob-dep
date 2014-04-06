@@ -12,9 +12,39 @@
   margin-top: 15px;
   margin-left: 10px;
 
+  .new-comment{
+    textarea{
+      resize: none;
+      width: 87%;
+      margin-left: 3px;
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid $color-4;
+      font-size: 14px;
+    }
+
+    input{
+      opacity: 1;
+    }
+
+    .cancel{
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 11px;
+      color: $color-5;
+
+      &:hover{
+        cursor: pointer;
+        color: $color-1;
+      }
+    }
+  }
+
   input{
     margin-left: 3px;
-    width: 87%;
+    padding-left: 7px;
+    width: 85%;
+    margin-bottom: 5px;
   }
 
   .comment{
@@ -22,9 +52,12 @@
   
     .comment-date{
       float: right;
+      font-size: 12px;
+      color: $color-4;
     }
     .comment-poster{
       font-weight: bold;
+      color: $color-1;
     }
   }
 }

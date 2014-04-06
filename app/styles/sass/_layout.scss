@@ -7,6 +7,9 @@ $color-5: #A0574A;
 .margin-right-small{
   margin-right: 5px;
 }
+.margin-vertical-small{
+  margin: 5px 0;
+}
 
 html{
   height: 100%;
@@ -19,6 +22,29 @@ body{
   h1{
     font-size: 36px;
     margin: 10px 0;
+  }
+
+  .button{
+    padding: 7px 10px;
+    background-color: $color-4;
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    font-weight: lighter;
+
+    &:hover{
+      cursor: pointer;
+      background-color: lighten($color-4, 5%);
+      font-weight: normal;
+    }
+  }
+
+  .input{
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid $color-4;
+    opacity: .5;
   }
 }
 

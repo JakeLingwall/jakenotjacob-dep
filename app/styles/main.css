@@ -1,6 +1,9 @@
 .margin-right-small {
   margin-right: 5px; }
 
+.margin-vertical-small {
+  margin: 5px 0; }
+
 html {
   height: 100%; }
 
@@ -11,6 +14,23 @@ body {
   body h1 {
     font-size: 36px;
     margin: 10px 0; }
+  body .button {
+    padding: 7px 10px;
+    background-color: #75807c;
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    font-weight: lighter; }
+    body .button:hover {
+      cursor: pointer;
+      background-color: #828d89;
+      font-weight: normal; }
+  body .input {
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid #75807c;
+    opacity: .5; }
 
 #taTextElement {
   min-width: 300px;
@@ -91,12 +111,35 @@ body {
 .post-comments {
   margin-top: 15px;
   margin-left: 10px; }
+  .post-comments .new-comment textarea {
+    resize: none;
+    width: 87%;
+    margin-left: 3px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #75807c;
+    font-size: 14px; }
+  .post-comments .new-comment input {
+    opacity: 1; }
+  .post-comments .new-comment .cancel {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 11px;
+    color: #a0574a; }
+    .post-comments .new-comment .cancel:hover {
+      cursor: pointer;
+      color: #505658; }
   .post-comments input {
     margin-left: 3px;
-    width: 87%; }
+    padding-left: 7px;
+    width: 85%;
+    margin-bottom: 5px; }
   .post-comments .comment {
     width: 90%; }
     .post-comments .comment .comment-date {
-      float: right; }
+      float: right;
+      font-size: 12px;
+      color: #75807c; }
     .post-comments .comment .comment-poster {
-      font-weight: bold; }
+      font-weight: bold;
+      color: #505658; }

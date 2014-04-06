@@ -1,9 +1,10 @@
 <div class="post-comments">
   <input class="input" placeholder="Leave A Comment" ng-focus="authorComment = true" ng-show="!authorComment"/>
   <div class="new-comment" ng-show="authorComment">
-    <input placeholder="Name" ng-model="poster"/>
-    <textarea ng-model="commentText"></textarea>
-    <div class="button" ng-click="makeAComment()">Leave Comment</div>
+    <input class="input" placeholder="Name" ng-model="poster"/>
+    <textarea ng-model="commentText" placeholder="Comment"></textarea>
+    <div style="margin-left: 3px;" class="button" ng-click="makeAComment()">Leave Comment</div>
+    <div class="cancel" ng-click="authorComment = false">Cancel</div>
   </div>
   <div ng-repeat="comment in comments" class="comment">
     <hr/>
