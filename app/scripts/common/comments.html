@@ -1,7 +1,16 @@
 <div class="post-comments">
-  <input class="input" placeholder="Leave A Comment" ng-focus="makeAComment()"/>
-  <div ng-repeat="comment in comments">
-    <div><span>{{comment.poster}}</span> <span>{{comment.date | date}}</span></div>
+  <input class="input" placeholder="Leave A Comment" ng-focus="authorComment = true" ng-show="!authorComment"/>
+  <div class="new-comment" ng-show="authorComment">
+    <input placeholder="Name" ng-model="poster"/>
+    <textarea ng-model="commentText"></textarea>
+    <div class="button" ng-click="makeAComment()">Leave Comment</div>
+  </div>
+  <div ng-repeat="comment in comments" class="comment">
+    <hr/>
+    <div>
+      <span class="comment-poster">{{comment.poster}}</span> 
+      <span class="comment-date">{{comment.date | date}}</span>
+    </div>
     <div>{{comment.comment}}</div>
   </div>
 </div>

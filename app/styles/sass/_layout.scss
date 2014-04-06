@@ -9,11 +9,12 @@ $color-5: #A0574A;
 }
 
 html{
-
+  height: 100%;
 }
 body{
   font-weight: lighter;
   font-family: helvetica;
+  min-height: 100%;
 
   h1{
     font-size: 36px;
@@ -49,13 +50,14 @@ body{
   }
 }
 .left-nav{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
   width: 125px;
-  overflow: hidden;
   background-color: $color-1;
+  /*I hate this but need it until responsive*/
+  overflow: auto;
 
   .nav-item{
     width: 125px;

@@ -8,9 +8,8 @@ angular.module('jakenotjacobApp').controller('adminCtrl', function ($scope, $loc
   //Will need to authenticate on this page. simple-login?
 
   $scope.leeroyJenkins = function(){
-    debugger;
     var newpost = {title: $scope.postTitle, body: $scope.newPost, date: new Date().getTime(), comments: []};
-    dataRef.child('posts').push(newpost);
+    dataRef.child('posts').child(newpost.date).setWithPriority(newpost, newpost.date);
   }
   // dataRef.child($routeParams.project).on('value', function(data){
   //   setScopeData(data.val());

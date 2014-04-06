@@ -3,4 +3,28 @@
     color: $color-2;
   }
   color: $color-1;
+
+  .post{
+    margin-bottom: 30px;
+  }
+}
+.post-comments{
+  margin-top: 15px;
+  margin-left: 10px;
+
+  input{
+    margin-left: 3px;
+    width: 87%;
+  }
+
+  .comment{
+    width: 90%;
+  
+    .comment-date{
+      float: right;
+    }
+    .comment-poster{
+      font-weight: bold;
+    }
+  }
 }

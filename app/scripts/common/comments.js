@@ -6,11 +6,15 @@ angular.module('jakenotjacobApp').directive('comments', function ($location, $ro
     link: function(scope, elem, attrs) {
 
       //Nested comments... to come soon right?
-
+      scope.authorComment = false;
 
       //callback to the parent to save a new comment. 
       scope.makeAComment = function(){
-        scope.newComment({newComment: "hi"});
+        var postComment = {poster: scope.poster, date: new Date().getTime(), comment: scope.commentText}
+        scope.newComment({newComment: postComment});
+        scope.poster = null;
+        scope.commentText = null;
+        scope.authorComment = false;
       }
     }
   }
