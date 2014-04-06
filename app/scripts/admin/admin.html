@@ -1,7 +1,44 @@
 <div class="admin">
-  <div class="margin-vertical-small">
-    <input ng-model="postTitle" placeholder="Post Title"/>
+  <div class="blog-admin">
+    <div class="edit-pist">
+      <div class="margin-vertical-small">
+        <input ng-model="post.title" placeholder="Post Title"/>
+      </div>
+      <div class="margin-vertical-small" text-angular ng-model="post.body"></div>
+      <div class="button margin-vertical-small" ng-click="leeroyJenkins()">Yolo Post</div>
+    </div>
+    <div class="select-post">
+      <div ng-repeat="post in data.posts">
+        <span class="select-a-post" ng-click="editPost()">{{post.title}}   -   {{post.date | date}}</span>
+      </div>
+    </div>
   </div>
-  <div class="margin-vertical-small" text-angular ng-model="newPost"></div>
-  <div class="button margin-vertical-small" ng-click="leeroyJenkins()">Yolo Post</div>
+  <div class="project-admin">
+    <h1>Project Admin</h1>
+    <div class="project-selector" ng-repeat="project in projects">
+      <span ng-click="selectProject()">{{project.name}}</span>
+    </div>
+    <div class="edit-project" ng-show="selectedProject">
+      <h2>{{selectedProject.name}}</h2>
+      <div class="current-goal-section">
+        <input ng-model="selectedProject.current_goal.text" placeholder="current goal"/>      
+        <input ng-model="selectedProject.current_goal.percent" placeholder="%"/>
+        <div class="button" ng-click="updateProjectCurrentGoal()">Update %</div>
+      </div>
+      <div class="project-update">
+        <input ng-model="newUpdate" placeholder="update"/>
+        <div class="button" ng-click="postUpdate()">Post Update</div>
+      </div>
+      <div class="project-description">
+        <input ng-model="selectedProject.description.text" placeholder="Project Description"/>
+        <input ng-model="selectedProject.description.link" placeholder="Project Link"/>
+        <div class="button" ng-click="updateMeta()">Update Meta</div>
+      </div>
+      <div class="project-files">
+        <input ng-model="newFile.name" placeholder="newFile.name"/>
+        <input ng-model="newFile.link" placeholder="newFile.link"/>
+        <div class="button" ng-click="newFile()">New File</div>
+      </div>
+    </div>
+  </div>
 </div>

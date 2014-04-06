@@ -1,3 +1,27 @@
 <div class="project">
-  <h1>{{project.name}}</h1>
+  <div class="project-header">
+    <h1>{{project.name}}</h1>
+    <span>{{project.description.text}}</span>
+    <div class="project-link" ng-show="project.description.link">
+      <a ng-href="{{project.description.link}}">{{project.name}}</a>
+    </div>
+  </div>
+  <div class="status">
+    <h2>Current Goal: {{project.current_goal.text}}</h2>
+    <div class="current-goal-status">Progress: {{project.current_goal.percent}}%</div>
+  </div>
+  <div class="updates">
+    <h2>Updates</h2>
+    <div ng-repeat="update in project.updates" class="update">
+      <span>{{update.text}}</span>
+      <span class="update-date">{{update.date | date}}</span>
+    </div>
+  </div>
+  <div class="project-files" ng-show="project.files">
+    <h2>Files</h2>
+    <div ng-repeat="file in project.files">
+      <span>{{file.name}}</span>
+      <span><a ng-href="{{file.link}}"></a></span>
+    </div>
+  </div>
 </div>
