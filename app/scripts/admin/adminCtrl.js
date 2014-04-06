@@ -1,8 +1,22 @@
 'use strict';
 
-angular.module('jakenotjacobApp').controller('adminCtrl', function ($scope, $location, $routeParams) {
+angular.module('jakenotjacobApp').controller('adminCtrl', function ($scope, $location, $routeParams, $cookies) {
 
   var dataRef = new Firebase("https://jakenotjacob.firebaseio.com");
+  var auth = new FirebaseSimpleLogin(dataRef, function(error, user) {
+    if (error) {
+      alert("Run Jake Run!")
+      console.log(error);
+    } else if (user) {
+      // user authenticated with Firebase
+      console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+    } else {
+      // user is logged out
+      $location.path("/donthackme/login");
+    }
+  });
+
+
   $scope.post = {};
 
   //Will need to authenticate on this page. simple-login?

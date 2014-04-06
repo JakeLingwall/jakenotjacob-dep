@@ -22,6 +22,10 @@ angular.module('jakenotjacobApp', [
         templateUrl: '/scripts/admin/admin.html',
         controller: 'adminCtrl'
       })
+      .when("/donthackme/login", {
+        templateUrl: "/scripts/login/login.html",
+        controller: 'loginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
