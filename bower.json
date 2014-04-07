@@ -8,7 +8,12 @@
     "angular-resource": "1.3.0-beta.3",
     "angular-cookies": "1.3.0-beta.3",
     "angular-sanitize": "1.3.0-beta.3",
-    "angular-route": "1.3.0-beta.3"
+    "angular-route": "1.3.0-beta.3",
+    "firebase": "*",
+    "angularfire": "*",
+    "firebase-simple-login": "*",
+    "lodash": "*",
+    "textAngular": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.3.0-beta.3",
