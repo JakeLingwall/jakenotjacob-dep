@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Jake Not Jacob</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -29,7 +29,13 @@
 
     <div class="left-nav" ng-controller="mainCtrl">
       <div class="nav-item">
-        <img src="./images/jakeface.png"/>
+        <img src="./images/jakeface.png" ng-show="notHovered" ng-mouseover="notHovered = false"/>
+        <div class="social-holder" ng-mouseover="notHovered = false" ng-mouseleave="notHovered = true" ng-show="!notHovered">
+          <div class="social-block facebook" ng-click="toFacebook()"><i class="fa fa-facebook"></i></div>
+          <div class="social-block twitter" ng-click="toTwitter()"><i class="fa fa-twitter"></i></div>
+          <div class="social-block linkedin" ng-click="toLinkedin()"><i class="fa fa-linkedin"></i></div>
+          <div class="social-block github" ng-click="toGithub()"><i class="fa fa-github"></i></div>
+        </div>
       </div>
       <div class="nav-item" ng-click="toBlog()">
         <span><i class="fa fa-comments margin-right-small" style="font-size:20px;"></i>Blog</span>

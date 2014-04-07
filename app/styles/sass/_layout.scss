@@ -61,7 +61,7 @@ body{
   margin-top: 5px;
 }
 .header{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 125px;
   right: 0;
@@ -85,6 +85,69 @@ body{
   /*I hate this but need it until responsive*/
   overflow: auto;
 
+      .social-holder{
+        width: 125px;
+        height: 125px;
+        overflow: hidden;
+        line-height: 62px;
+        text-align: center;
+        -webkit-user-select: none;
+        
+        .facebook{
+          background-color: $color-2;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          &:hover{
+            background-color: lighten($color-2, 10%);
+          }
+        }
+        .twitter{
+          background-color: $color-3;
+          margin-left: -2px;
+          position: absolute;
+          top: 0;
+          left: 62px;
+
+          &:hover{
+            background-color: lighten($color-3, 10%);
+          }
+        }
+        .github{
+          background-color: $color-4;
+          position: absolute;
+          top: 62px;
+          left: 62px;
+          
+          &:hover{
+            background-color: lighten($color-4, 10%);
+          }
+        }
+        .linkedin{
+          background-color: $color-5;
+          position: absolute;
+          top: 62px;
+          left: 0px;
+
+          &:hover{
+            background-color: lighten($color-5, 10%);
+          }
+        }
+
+        .social-block{
+          text-align: center;
+          width: 62.5px;
+          height: 62.5px;
+          /*display: inline-block;*/
+          margin: 0px;
+          padding: 0px;
+
+          &:hover{
+            color: white;
+          }
+        }
+      }
   .nav-item{
     width: 125px;
     display: inline-block;
@@ -107,7 +170,6 @@ body{
 
     &:nth-child(2){
       background-color: $color-1;
-      margin-top: -3px;
 
       &:hover{
         background-color: lighten($color-1, 3%);

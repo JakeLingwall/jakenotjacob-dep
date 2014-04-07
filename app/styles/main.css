@@ -45,7 +45,7 @@ body {
   margin-top: 5px; }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 125px;
   right: 0;
@@ -66,6 +66,51 @@ body {
   background-color: #505658;
   /*I hate this but need it until responsive*/
   overflow: auto; }
+  .left-nav .social-holder {
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+    line-height: 62px;
+    text-align: center;
+    -webkit-user-select: none; }
+    .left-nav .social-holder .facebook {
+      background-color: #796555;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .left-nav .social-holder .facebook:hover {
+        background-color: #977e6a; }
+    .left-nav .social-holder .twitter {
+      background-color: #c98b5f;
+      margin-left: -2px;
+      position: absolute;
+      top: 0;
+      left: 62px; }
+      .left-nav .social-holder .twitter:hover {
+        background-color: #d6a785; }
+    .left-nav .social-holder .github {
+      background-color: #75807c;
+      position: absolute;
+      top: 62px;
+      left: 62px; }
+      .left-nav .social-holder .github:hover {
+        background-color: #8f9995; }
+    .left-nav .social-holder .linkedin {
+      background-color: #a0574a;
+      position: absolute;
+      top: 62px;
+      left: 0px; }
+      .left-nav .social-holder .linkedin:hover {
+        background-color: #b87265; }
+    .left-nav .social-holder .social-block {
+      text-align: center;
+      width: 62.5px;
+      height: 62.5px;
+      /*display: inline-block;*/
+      margin: 0px;
+      padding: 0px; }
+      .left-nav .social-holder .social-block:hover {
+        color: white; }
   .left-nav .nav-item {
     width: 125px;
     display: inline-block;
@@ -80,8 +125,7 @@ body {
     .left-nav .nav-item:nth-child(1) img {
       max-width: 125px; }
     .left-nav .nav-item:nth-child(2) {
-      background-color: #505658;
-      margin-top: -3px; }
+      background-color: #505658; }
       .left-nav .nav-item:nth-child(2):hover {
         background-color: #575e60; }
     .left-nav .nav-item:nth-child(3) {
