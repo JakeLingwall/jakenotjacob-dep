@@ -188,6 +188,15 @@ body {
       font-weight: bold;
       color: #505658; }
 
+.like {
+  color: #505658; }
+  .like:hover {
+    color: #a0574a;
+    cursor: pointer; }
+
+.liked {
+  color: #a0574a; }
+
 h1 {
   color: #796555; }
 

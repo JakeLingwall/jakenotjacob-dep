@@ -1,10 +1,9 @@
 <div class="blog">
   <div ng-repeat="post in posts" class="post">
     <h1>{{post.title}}</h1>
-    <div class="post-body">
-      {{post.body}}
+    <div class="post-body" ng-bind-html="post.body">
     </div>
-    <div class="comments-holder" comments="post.comments" new-comment="saveNewComment(newComment)">
+    <div class="comments-holder" comments="post.comments" new-comment="saveNewComment(newComment)" like-callback="likePost()" like-count="post.likes">
     </div>
   </div>
 </div>

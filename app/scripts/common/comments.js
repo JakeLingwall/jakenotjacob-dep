@@ -1,10 +1,9 @@
 angular.module('jakenotjacobApp').directive('comments', function ($location, $routeParams) {
   return{
     restrict: 'A',
-    scope: {comments: "=", newComment: "&"},
+    scope: {comments: "=", newComment: "&", likeCallback: "&?", likeCount: "=?"},
     templateUrl: '/scripts/common/comments.html',
     link: function(scope, elem, attrs) {
-
       //Nested comments... to come soon right?
       scope.authorComment = false;
 
@@ -15,6 +14,10 @@ angular.module('jakenotjacobApp').directive('comments', function ($location, $ro
         scope.poster = null;
         scope.commentText = null;
         scope.authorComment = false;
+      }
+
+      scope.postLiked = function(){
+        scope.likeCallback();
       }
     }
   }

@@ -3,7 +3,7 @@
 angular.module('jakenotjacobApp').controller('blogCtrl', function ($scope) {
 
   var dataRef = new Firebase("https://jakenotjacob.firebaseio.com");
-  dataRef.child('posts').limit(5).on('value', function(data){
+  dataRef.child('posts').limit(5).once('value', function(data){
     setScopeData(data.val());
   });
 
@@ -21,6 +21,10 @@ angular.module('jakenotjacobApp').controller('blogCtrl', function ($scope) {
 
   $scope.saveNewComment = function(newComment){
     dataRef.child('posts').child(this.post.date).child('comments').push(newComment);
+  }
+
+  $scope.likePost = function(){
+    dataRef.child('posts').child(this.post.date).child('likes').set(this.post.likes + 1);
   }
 
 });

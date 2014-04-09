@@ -1,4 +1,5 @@
 <div class="post-comments">
+  <span ng-if="likeCount > -1 && !authorComment" like count="likeCount" callback="postLiked()"></span>
   <input class="input" placeholder="Leave A Comment" ng-focus="authorComment = true" ng-show="!authorComment"/>
   <div class="new-comment" ng-show="authorComment">
     <input class="input" placeholder="Name" ng-model="poster"/>

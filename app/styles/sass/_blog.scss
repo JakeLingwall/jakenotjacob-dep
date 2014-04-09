@@ -62,3 +62,16 @@
     }
   }
 }
+
+.like{
+  color: $color-1;
+
+  &:hover{
+    color: $color-5;
+    cursor: pointer;
+  }
+}
+
+.liked{
+  color: $color-5;
+}
