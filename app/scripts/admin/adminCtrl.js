@@ -23,13 +23,13 @@ angular.module('jakenotjacobApp').controller('adminCtrl', function ($scope, $loc
 
   $scope.leeroyJenkins = function(){
     if(!$scope.post.date){
-      var newpost = {title: $scope.post.title, body: $scope.post.body, date: new Date().getTime(), comments: []};
+      var newpost = {title: $scope.post.title, body: $scope.post.body, date: new Date().getTime(), comments: [], likes: 0};
       dataRef.child('posts').child(newpost.date).setWithPriority(newpost, newpost.date);
     } else{
       if(!$scope.post.comments){
         $scope.post.comments = [];
       }
-      var newpost = {title: $scope.post.title, body: $scope.post.body, date: $scope.post.date, comments: $scope.post.comments};
+      var newpost = {title: $scope.post.title, body: $scope.post.body, date: $scope.post.date, comments: $scope.post.comments, likes: $scope.post.likes};
       dataRef.child('posts').child(newpost.date).setWithPriority(newpost, newpost.date);
     }
   }
