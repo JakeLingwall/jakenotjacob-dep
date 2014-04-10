@@ -9,9 +9,15 @@ angular.module('jakenotjacobApp').controller('projectCtrl', function ($scope, $l
 
   function setScopeData (data){
     $scope.project = data;
+    $scope.updates = _.sortBy(data.updates, function(update){return -1 * update.date});;
+
     if(!$scope.$$phase){
       $scope.$apply();
     }
   };
+
+  $scope.openFile = function(){
+    window.location = this.file.link;
+  }
 
 });

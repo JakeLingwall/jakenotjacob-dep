@@ -2,26 +2,34 @@
   <div class="project-header">
     <h1>{{project.name}}</h1>
     <span>{{project.description.text}}</span>
-    <div class="project-link" ng-show="project.description.link">
-      <a ng-href="{{project.description.link}}">{{project.name}}</a>
+    <div class="project-link" ng-show="project.description.link !== '.'">
+      <span class="visit-this">Check it out <i class="fa fa-arrow-right"></i></span><a ng-href="{{project.description.link}}">{{project.name}}</a>
     </div>
   </div>
   <div class="status">
     <h2>Current Goal: {{project.current_goal.text}}</h2>
-    <div class="current-goal-status">Progress: {{project.current_goal.percent}}%</div>
+    <div class="current-goal-status">Progress: <span class="percent">{{project.current_goal.percent}}%</span></div>
   </div>
   <div class="updates">
     <h2>Updates</h2>
-    <div ng-repeat="update in project.updates" class="update">
-      <span>{{update.text}}</span>
-      <span class="update-date">{{update.date | date}}</span>
+    <div ng-repeat="update in updates" class="update">
+      <div class="update-text">
+        <i class="fa fa-quote-left"></i>
+        <span>{{update.text}}</span>
+        <i class="fa fa-quote-right"></i>
+      </div>
+      <div class="update-date">{{update.date | date}}</div>
     </div>
   </div>
   <div class="project-files" ng-show="project.files">
     <h2>Files</h2>
-    <div ng-repeat="file in project.files">
-      <span>{{file.name}}</span>
-      <span><a ng-href="{{file.link}}"></a></span>
-    </div>
+    <a ng-repeat="file in project.files" class="file" ng-href="{{file.link}}" target="_blank">
+      <div>
+        <i class="fa fa-file-text-o"></i>
+      </div>
+      <span>
+        {{file.name}}
+      </span>
+    </a>
   </div>
 </div>

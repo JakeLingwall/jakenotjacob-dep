@@ -151,6 +151,8 @@ body {
     color: #796555; }
   .blog .post {
     margin-bottom: 30px; }
+    .blog .post img {
+      max-width: 95%; }
 
 .post-comments {
   margin-top: 15px;
@@ -202,3 +204,59 @@ h1 {
 
 h2 {
   color: #796555; }
+
+.project .project-link {
+  margin-top: 20px;
+  color: #75807c; }
+  .project .project-link .visit-this {
+    padding-right: 10px; }
+  .project .project-link a {
+    text-decoration: none;
+    color: #505658; }
+.project .status .current-goal-status .percent {
+  font-weight: bold;
+  font-size: 34px;
+  vertical-align: middle; }
+.project .updates .update {
+  margin: 20px 0;
+  line-height: 24px; }
+  .project .updates .update .update-text {
+    max-width: 82%;
+    width: 82%;
+    display: inline-block; }
+    .project .updates .update .update-text .fa-quote-left {
+      font-size: 24px;
+      padding-right: 5px;
+      color: #505658; }
+    .project .updates .update .update-text .fa-quote-right {
+      font-size: 24px;
+      padding-left: 5px;
+      color: #505658; }
+  .project .updates .update .update-date {
+    font-size: 12px;
+    display: inline-block;
+    width: 15%;
+    vertical-align: top;
+    text-align: right;
+    color: #75807c; }
+
+.file {
+  text-align: center;
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+  border: 1px solid #75807c;
+  vertical-align: middle;
+  background-color: #efefef;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #505658;
+  text-decoration: none; }
+  .file:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    color: white; }
+  .file i {
+    margin-top: 27px;
+    font-size: 48px; }

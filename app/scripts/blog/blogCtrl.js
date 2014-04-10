@@ -24,7 +24,8 @@ angular.module('jakenotjacobApp').controller('blogCtrl', function ($scope) {
   }
 
   $scope.likePost = function(){
-    dataRef.child('posts').child(this.post.date).child('likes').set(this.post.likes + 1);
+    this.post.likes = this.post.likes + 1;
+    dataRef.child('posts').child(this.post.date).child('likes').set(this.post.likes);
   }
 
 });

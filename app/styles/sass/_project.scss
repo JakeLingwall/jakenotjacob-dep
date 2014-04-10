@@ -4,3 +4,85 @@ h1{
 h2{
   color: $color-2;
 }
+
+.project{
+
+  .project-link{
+    margin-top: 20px;
+    color: $color-4;
+    .visit-this{
+      padding-right: 10px;
+    }
+    a{
+      text-decoration: none;
+      color: $color-1;
+    }
+  }
+
+  .status{
+    .current-goal-status{
+      .percent{
+        font-weight: bold;
+        font-size: 34px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .updates{
+    .update{
+      margin: 20px 0;
+      line-height: 24px;
+
+      .update-text{
+        max-width: 82%;
+        width: 82%;
+        display: inline-block;
+
+        .fa-quote-left{
+          font-size: 24px;
+          padding-right: 5px;
+          color: $color-1;
+        }
+        .fa-quote-right{
+          font-size: 24px;
+          padding-left: 5px;
+          color: $color-1;
+        }
+      }
+      .update-date{
+        font-size: 12px;
+        display: inline-block;
+        width: 15%;
+        vertical-align: top;
+        text-align: right;
+        color: $color-4;
+      }
+    }
+  }
+}
+
+.file{
+  text-align: center;
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+  border: 1px solid $color-4;
+  vertical-align: middle;
+  background-color: #efefef;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: $color-1;
+  text-decoration: none;
+
+  &:hover{
+    background-color: #ccc;
+    cursor: pointer;
+    color: white;
+  }
+  i{
+    margin-top: 27px;
+    font-size: 48px;
+  }
+}
