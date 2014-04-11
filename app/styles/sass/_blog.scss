@@ -3,6 +3,12 @@
   h1{
     color: $color-2;
   }
+  .blog-title{
+    &:hover{
+      cursor: pointer;
+      color: $color-3;
+    }
+  }
   color: $color-1;
 
   .post{

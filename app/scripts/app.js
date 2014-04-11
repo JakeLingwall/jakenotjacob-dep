@@ -14,6 +14,10 @@ angular.module('jakenotjacobApp', [
         templateUrl: '/scripts/blog/blog.html',
         controller: 'blogCtrl'
       })
+      .when('/blog/post/:id', {
+        templateUrl: '/scripts/blog/blog.html',
+        controller: 'postCtrl'
+      })
       .when('/:project', {
         templateUrl: '/scripts/project/project.html',
         controller: 'projectCtrl'

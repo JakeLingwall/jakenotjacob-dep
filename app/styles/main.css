@@ -149,6 +149,9 @@ body {
   color: #505658; }
   .blog h1 {
     color: #796555; }
+  .blog .blog-title:hover {
+    cursor: pointer;
+    color: #c98b5f; }
   .blog .post {
     margin-bottom: 30px;
     max-width: 600px; }

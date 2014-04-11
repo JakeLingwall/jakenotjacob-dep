@@ -1,24 +1,22 @@
 'use strict';
 
-angular.module('jakenotjacobApp').controller('blogCtrl', function ($scope, $location) {
+angular.module('jakenotjacobApp').controller('postCtrl', function ($scope, $routeParams, $location) {
+
+  $scope.singlePost = true;
 
   var dataRef = new Firebase("https://jakenotjacob.firebaseio.com");
-  dataRef.child('posts').limit(5).once('value', function(data){
+  dataRef.child('posts').child($routeParams.id).once('value', function(data){
     setScopeData(data.val());
   });
 
   function setScopeData (data){
-    //some hack because firebase ordering is jacked and I hate their 'sort by priority filter'
-    $scope.posts = _.sortBy(data, function(datum){
-      return datum.date * -1;
-    });
+    if(!data){
+      $location.path("/");
+    }
+    $scope.posts = [data];
     if(!$scope.$$phase){
       $scope.$apply();
     }
-  }
-
-  $scope.toPost = function(){
-    $location.path("/blog/post/" + this.post.date);
   }
 
   $scope.saveNewComment = function(newComment){
